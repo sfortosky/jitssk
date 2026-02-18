@@ -1,4 +1,5 @@
 import Input from "@/app/components/form-components/Input";
+import Button from "@/app/components/form-components/button";
 
 export default function Home() {
   return (
@@ -13,6 +14,8 @@ export default function Home() {
           >
               Email
           </Input>
+          <Button className="btn-primary">Click Me</Button>
+          <Button className="btn-secondary">Click Me Too!</Button>
       </form>
     </div>
   );
