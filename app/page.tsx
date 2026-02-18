@@ -1,9 +1,19 @@
-import Image from "next/image";
+import Input from "@/app/components/form-components/Input";
 
 export default function Home() {
   return (
     <div>
-      <button className="btn btn-primary">I am a button</button>
+      <form>
+          <Input id="first">First Attempt</Input>
+          <Input
+              id="second"
+              type="email"
+              required={true}
+              placeholder="Sample"
+          >
+              Email
+          </Input>
+      </form>
     </div>
   );
 }
