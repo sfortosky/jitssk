@@ -47,3 +47,7 @@
   --purple: #7640B4;
   --pink: #EFD5F2;
 }
+
+h1 {
+    @apply text-5xl font-bold;
+}

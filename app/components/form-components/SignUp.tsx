@@ -6,7 +6,7 @@ import TimePicker from "react-multi-date-picker/plugins/time_picker";
 import DatePanel from "react-multi-date-picker/plugins/date_panel";
 
 import Input from "@/app/components/form-components/Input";
-import Button from "@/app/components/form-components/button";
+import Button from "@/app/components/form-components/Button";
 
 
 const setCalendar = () => {
@@ -20,6 +20,7 @@ export default function SignUp () {
     const calendarRef = useRef<CalendarRef>(null);
 
     useEffect(() => {
+        // @ts-expect-error this property is guaranteed to exist
         calendarRef!.current!.openCalendar();
     }, []);
 
@@ -56,9 +57,9 @@ export default function SignUp () {
                 ]}
             />
         </div>
-        <fieldset className="flex">
+        <fieldset className="flex flex-wrap">
             <label htmlFor="textarea" className="label">Additional Information</label>
-            <textarea id="textarea" className="border border-neutral rounded-box"/>
+            <textarea id="textarea" className="textarea"/>
         </fieldset>
         <Button className="btn-primary">Sign me up!</Button>
     </form>
