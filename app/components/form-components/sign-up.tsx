@@ -1,8 +1,20 @@
+'use client';
+import React, { useEffect, useRef } from "react";
+import Calendar, { CalendarRef } from "react-multi-date-picker";
+import TimePicker from "react-multi-date-picker/plugins/time_picker";
+import DatePanel from "react-multi-date-picker/plugins/date_panel";
+
 import Input from "@/app/components/form-components/Input";
 import Button from "@/app/components/form-components/button";
 
 
 export default function SignUp () {
+    const calendarRef = useRef<CalendarRef>();
+
+    useEffect(() => {
+        calendarRef.current.openCalendar();
+    }, []);
+
     return <form>
         <h1>Sign your school up today</h1>
         <div className="flex gap-2">
@@ -21,13 +33,17 @@ export default function SignUp () {
             <Input>Number of Participants Expected</Input>
             <Input>Type of Program</Input>
         </div>
-        <div className="flex gap-2">
-            <Input type="date">Preferred Dates</Input>
-            <div>
-                <Input type="time">Preferred Times</Input>
-                <Input type="time"/>
-                <Input type="time"/>
-            </div>
+        <div className="min-h-90">
+            <Calendar
+                render={() => null}
+                ref={calendarRef}
+                onClose={() => false}
+                multiple
+                plugins={[
+                    <TimePicker position="bottom" key="timePicker" hideSeconds mStep={15}/>,
+                    <DatePanel sort="date" key="datePanel" markFocused/>
+                ]}
+            />
         </div>
         <fieldset className="flex">
             <label htmlFor="textarea" className="label">Additional Information</label>
