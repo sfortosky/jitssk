@@ -1,6 +1,8 @@
 import SignUp from "@/app/components/form-components/SignUp";
 import Contact from "@/app/components/Contact";
 import Navbar from "@/app/components/Navbar";
+import Resources from "@/app/components/Resources";
+import About from "@/app/components/About";
 
 export default function Home() {
     return (
@@ -8,29 +10,19 @@ export default function Home() {
             <Navbar />
             <main className="mx-auto w-fit">
                 {/* Home Section */}
-                <section id="home" className="flex items-center justify-center">
-                    Placeholder
-                </section>
+                <section id="home" className="flex items-center justify-center"/>
 
                 {/* About Section */}
-                {/*<section id="about" className="min-h-screen flex items-center justify-center bg-gray-400">*/}
-                {/*    <About />*/}
-                {/*</section>*/}
+                <About />
 
                 {/* Resources Section */}
-                {/*<section id="resources" className="min-h-screen flex items-center justify-center bg-gray-400">*/}
-                {/*    <Resources />*/}
-                {/*</section>*/}
+                <Resources/>
 
                 {/* Signup Section */}
-                {/*<section id="signup" className="min-h-screen flex items-center justify-center bg-gray-400">*/}
-                {/*    <SignUp />*/}
-                {/*</section>*/}
+                <SignUp />
 
                 {/* Contact Section */}
-                <section id="contact" className="min-h-screen flex items-center justify-center">
-                    <Contact />
-                </section>
+                <Contact />
             </main>
         </>
   );

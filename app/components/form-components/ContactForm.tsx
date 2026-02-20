@@ -7,7 +7,7 @@ export default function ContactForm() {
         <Input>Your Email</Input>
         <fieldset className="flex flex-wrap pt-1 pb-2">
             <label htmlFor="contact-form" className="label">Your Message</label>
-            <textarea id="contact-form" className="textarea"/>
+            <textarea id="contact-form" className="textarea border-neutral"/>
         </fieldset>
         <Button className="btn-primary">Send Message</Button>
     </form>

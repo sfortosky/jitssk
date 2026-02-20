@@ -13,7 +13,7 @@ export default function Input({children, type, className, id, ...attributes}: In
         <input
             id={id}
             type={type ?? "text"}
-            className={`input border border-neutral rounded-field ${className}`}
+            className={`input border-neutral ${className}`}
             {...attributes}
         />
     </fieldset>
