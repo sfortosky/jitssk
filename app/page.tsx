@@ -3,14 +3,15 @@ import Contact from "@/app/components/Contact";
 import Navbar from "@/app/components/Navbar";
 import Resources from "@/app/components/Resources";
 import About from "@/app/components/About";
+import Home from "@/app/components/Home";
 
-export default function Home() {
+export default function Page() {
     return (
         <>
             <Navbar />
             <main>
                 {/* Home Section */}
-                <section id="home" className="flex items-center justify-center"/>
+                <Home />
 
                 {/* About Section */}
                 <About />
