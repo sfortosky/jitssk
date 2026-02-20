@@ -60,7 +60,7 @@ export default function SignUp () {
             </div>
             <fieldset className="flex flex-wrap w-fit pb-2">
                 <label htmlFor="textarea" className="label">Additional Information</label>
-                <textarea id="textarea" className="textarea border-neutral"/>
+                <textarea id="textarea" className="textarea border-base-200"/>
             </fieldset>
             <Button className="btn-primary">Sign me up!</Button>
         </form>

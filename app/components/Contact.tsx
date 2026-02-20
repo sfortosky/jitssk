@@ -3,11 +3,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 export default function Contact() {
-    return <section id="contact" className="min-h-screen hero">
+    return <section id="contact">
         <div className="hero-content">
             <div className="lg:text-left">
                 <h1>Get in touch!</h1>
-                <div className="join pt-5 join-vertical gap-2">
+                <div className="join join-vertical gap-2">
                     <span>If you have any questions or need assistance,<br/>please feel free to reach out to us.</span>
                     <span>You can also email us at<br/><a href="mailto:email@example.com">email@example.com</a></span>
                     <div>

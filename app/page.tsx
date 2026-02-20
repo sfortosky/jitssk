@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <>
             <Navbar />
-            <main className="mx-auto w-fit">
+            <main>
                 {/* Home Section */}
                 <section id="home" className="flex items-center justify-center"/>
 

@@ -7,6 +7,7 @@
   color-scheme: light;
 
   --color-base-100: #ffffff;
+  --color-base-200: #cccccc;
   --color-base-content: #000000;
   --color-primary: #5F72D9;
   --color-primary-content: #ffffff;
@@ -49,5 +50,9 @@
 }
 
 h1 {
-    @apply text-5xl font-bold;
+    @apply text-5xl font-bold text-center pb-5;
+}
+
+section {
+  @apply py-[10%] mx-auto w-fit;
 }
