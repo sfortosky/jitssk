@@ -45,13 +45,14 @@ export default function SignUp () {
             </div>
             <div className="min-h-85">
                 <DatePicker
+                    multiple
                     arrow={false}
+                    fixMainPosition={true}
                     currentDate={setCalendar()}
                     format={"YYYY-MM-DD hh:mm A"}
-                    render={() => null}
                     ref={calendarRef}
+                    render={() => null}
                     onClose={() => false}
-                    multiple
                     plugins={[
                         <TimePicker position="bottom" key="timePicker" hideSeconds mStep={15}/>,
                         <DatePanel sort="date" key="datePanel" markFocused/>
