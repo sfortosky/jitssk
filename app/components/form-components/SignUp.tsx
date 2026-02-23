@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useRef } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import DateObject from "react-date-object";
 import DatePicker , { CalendarRef } from "react-multi-date-picker";
 import TimePicker from "react-multi-date-picker/plugins/time_picker";
@@ -18,11 +18,23 @@ const setCalendar = () => {
 
 export default function SignUp () {
     const calendarRef = useRef<CalendarRef>(null);
+    const [vals, setVals] = useState<[DateObject]>();
 
     useEffect(() => {
         // @ts-expect-error this property is guaranteed to exist
         calendarRef!.current!.openCalendar();
     }, []);
+
+    const destructureDate = () => {
+        for (const val of vals || []) {
+            console.log(val);
+            console.log(val.year);
+            console.log(val.month.name);
+            console.log(val.day);
+            console.log(val.hour);
+            console.log(val.minute);
+        }
+    }
 
     return <section id="signup" className="min-h-fit">
         <form>
@@ -46,6 +58,8 @@ export default function SignUp () {
             <div className="min-h-85">
                 <DatePicker
                     multiple
+                    value={vals}
+                    onChange={setVals}
                     arrow={false}
                     fixMainPosition={true}
                     currentDate={setCalendar()}
@@ -63,7 +77,7 @@ export default function SignUp () {
                 <label htmlFor="textarea" className="label">Additional Information</label>
                 <textarea id="textarea" className="textarea border-base-200"/>
             </fieldset>
-            <Button className="btn-primary">Sign me up!</Button>
+            <Button type="button" className="btn-primary" onClick={destructureDate}>Sign me up!</Button>
         </form>
     </section>
 }
