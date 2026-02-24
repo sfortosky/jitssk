@@ -14,6 +14,12 @@ const images = [
 export default function Home() {
     return (
         <section id="home" className="w-full py-24">
+
+            <div className="flex items-center justify-center gap-2 mb-5">
+                <h2 className="text-9xl font-bold">JITSSK</h2>
+                <h2 className="text-3xl font-bold max-w-50">Jazz in the Schools Saskatchewan</h2>
+            </div>
+
             <div className="max-w-screen-xl mx-auto px-6">
                 <div className="overflow-x-auto overflow-y-hidden scrollbar-hide scroll-smooth select-none">
                     <div className="flex gap-6 snap-x snap-mandatory w-max items-start">

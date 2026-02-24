@@ -5,9 +5,9 @@ export default function ContactForm() {
     return <form>
         <Input>Your Name</Input>
         <Input>Your Email</Input>
-        <fieldset className="flex flex-wrap pt-1 pb-2">
-            <label htmlFor="contact-form" className="label">Your Message</label>
-            <textarea id="contact-form" className="textarea border-base-200"/>
+        <fieldset className="fieldset">
+            <legend className="fieldset-legend">Your Message</legend>
+            <textarea id="contact-form" className="textarea border-base-200" rows={6} cols={40}/>
         </fieldset>
         <Button className="btn-primary">Send Message</Button>
     </form>

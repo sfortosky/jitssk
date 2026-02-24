@@ -6,10 +6,10 @@ interface InputProps extends InputHTMLAttributes<HTMLInputElement>{
 
 
 export default function Input({children, type, className, id, ...attributes}: InputProps) {
-    return <fieldset className="flex flex-wrap py-1">
-        <label className="label pr-2 pb-1" htmlFor={id}>
+    return <fieldset className="fieldset w-full">
+        <legend className="fieldset-legend pr-2 pb-1">
             {children}
-        </label>
+        </legend>
         <input
             id={id}
             type={type ?? "text"}

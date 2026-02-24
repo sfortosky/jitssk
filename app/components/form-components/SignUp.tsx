@@ -36,27 +36,28 @@ export default function SignUp () {
         }
     }
 
-    return <section id="signup" className="min-h-fit">
+    return <section id="signup">
         <form>
             <h1>Sign your school up today</h1>
-            <div className="flex gap-2">
+            <div className="flex">
                 <Input>First Name</Input>
                 <Input>Last Name</Input>
             </div>
-            <div className="flex gap-2">
+            <div className="flex">
                 <Input>School Name</Input>
                 <Input>City/Town</Input>
             </div>
-            <div className="flex gap-2">
+            <div className="flex">
                 <Input>Email</Input>
                 <Input>Phone</Input>
             </div>
-            <div className="flex gap-2">
+            <div className="flex">
                 <Input>Number of Participants Expected</Input>
                 <Input>Type of Program</Input>
             </div>
-            <div className="min-h-85">
+            <div className="flex gap-98">
                 <DatePicker
+                    containerClassName="mt-2"
                     multiple
                     value={vals}
                     onChange={setVals}
@@ -72,12 +73,13 @@ export default function SignUp () {
                         <DatePanel sort="date" key="datePanel" markFocused/>
                     ]}
                 />
+
+                <fieldset className="fieldset">
+                    <legend className="fieldset-legend pt-1">Additional Information</legend>
+                    <textarea id="textarea" className="textarea border-base-200" rows={13} cols={50}/>
+                </fieldset>
             </div>
-            <fieldset className="flex flex-wrap w-fit pb-2">
-                <label htmlFor="textarea" className="label">Additional Information</label>
-                <textarea id="textarea" className="textarea border-base-200"/>
-            </fieldset>
-            <Button type="button" className="btn-primary" onClick={destructureDate}>Sign me up!</Button>
+            <Button type="button" className="btn-primary mt-1" onClick={destructureDate}>Sign me up!</Button>
         </form>
     </section>
 }
