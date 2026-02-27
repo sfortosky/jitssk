@@ -17,7 +17,7 @@ export default function Home() {
 
             <div className="flex items-center justify-center gap-2 mb-5">
                 <h2 className="text-9xl font-bold">JITSSK</h2>
-                <h2 className="text-3xl font-bold max-w-50">Jazz in the Schools Saskatchewan</h2>
+                <h2 className="text-3xl font-bold max-w-50 pt-3">Jazz in the Schools Saskatchewan</h2>
             </div>
 
             <div className="max-w-screen-xl mx-auto px-6">
