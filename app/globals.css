@@ -54,7 +54,11 @@ h1 {
 }
 
 section {
-  @apply py-[11%] mx-auto w-fit;
+  @apply py-15 w-full;
+}
+
+.section-content {
+  @apply mx-auto w-fit;
 }
 
 textarea {

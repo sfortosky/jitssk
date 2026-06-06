@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Contact() {
     return (
         <section id="contact">
-            <div className="hero-content">
+            <div className="hero-content section-content">
                 <div className="lg:text-left">
                     <h1>Get in touch!</h1>
                     <div className="join join-vertical gap-2">
