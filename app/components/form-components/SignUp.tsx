@@ -38,59 +38,63 @@ export default function SignUp () {
 
     return (
         <section id="signup">
-            <form className="section-content w-full max-w-2xl px-4 mx-auto">
+            <form className="section-content w-full max-w-2xl px-4 mx-auto flex flex-col gap-y-0">
                 <h1>Sign your school up today</h1>
 
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col md:flex-row gap-y-0 md:gap-x-4">
                     <Input>First Name</Input>
                     <Input>Last Name</Input>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col md:flex-row gap-y-0 md:gap-x-4">
                     <Input>School Name</Input>
                     <Input>City/Town</Input>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col md:flex-row gap-y-0 md:gap-x-4">
                     <Input>Email</Input>
                     <Input>Phone</Input>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex flex-col md:flex-row gap-y-0 md:gap-x-4">
                     <Input>Number of Participants Expected</Input>
                     <Input>Type of Program</Input>
                 </div>
 
-                <div className="flex flex-col md:flex-row gap-6 mt-4">
-                    <div className="w-full md:w-auto">
-                        <DatePicker
-                            containerClassName="mt-2 w-full"
-                            multiple
-                            value={vals}
-                            onChange={setVals}
-                            arrow={false}
-                            fixMainPosition={true}
-                            currentDate={setCalendar()}
-                            format={"YYYY-MM-DD hh:mm A"}
-                            ref={calendarRef}
-                            render={() => null}
-                            onClose={() => false}
-                            plugins={[
-                                <TimePicker position="bottom" key="timePicker" hideSeconds mStep={15}/>,
-                                <DatePanel sort="date" key="datePanel" markFocused/>
-                            ]}
-                        />
+                <div className="flex flex-col md:flex-row items-start gap-y-0 md:gap-x-4">
+                    <div className="w-full md:w-auto shrink-0">
+                        <div className="pt-1">
+                            <DatePicker
+                                containerClassName="w-full"
+                                multiple
+                                value={vals}
+                                onChange={setVals}
+                                arrow={false}
+                                fixMainPosition={true}
+                                currentDate={setCalendar()}
+                                format={"YYYY-MM-DD hh:mm A"}
+                                ref={calendarRef}
+                                render={() => null}
+                                onClose={() => false}
+                                plugins={[
+                                    <TimePicker position="bottom" key="timePicker" hideSeconds mStep={15}/>,
+                                    <DatePanel sort="date" key="datePanel" markFocused/>
+                                ]}
+                            />
+                        </div>
                     </div>
 
                     <fieldset className="fieldset w-full">
-                        <legend className="fieldset-legend pt-1">Additional Information</legend>
+                        <legend className="fieldset-legend pr-2 pb-1 text-left w-full">Additional Information</legend>
                         <textarea id="textarea" className="textarea border-base-200 w-full" rows={13} />
                     </fieldset>
                 </div>
 
-                <Button type="button" className="btn-primary mt-4 w-full md:w-auto" onClick={destructureDate}>
-                    Sign me up!
-                </Button>
+                <div className="w-full mt-4">
+                    <Button type="button" className="btn-primary w-full md:w-auto" onClick={destructureDate}>
+                        Sign me up!
+                    </Button>
+                </div>
             </form>
         </section>
     );

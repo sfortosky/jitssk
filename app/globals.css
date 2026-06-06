@@ -54,7 +54,7 @@ h1 {
 }
 
 section {
-  @apply py-15 w-full;
+  @apply py-15 w-full scroll-mt-20;
 }
 
 .section-content {

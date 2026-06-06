@@ -4,6 +4,7 @@ import Navbar from "@/app/components/Navbar";
 import Resources from "@/app/components/Resources";
 import About from "@/app/components/About";
 import Home from "@/app/components/Home";
+import Footer from "@/app/components/Footer";
 
 export default function Page() {
     return (
@@ -24,6 +25,9 @@ export default function Page() {
 
                 {/* Contact Section */}
                 <Contact />
+
+                {/* Contact Section */}
+                <Footer />
             </main>
         </>
   );
