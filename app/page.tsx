@@ -1,4 +1,4 @@
-import SignUp from "@/app/components/form-components/SignUp";
+import SignUp from "@/app/components/SignUp";
 import Contact from "@/app/components/Contact";
 import Navbar from "@/app/components/Navbar";
 import Resources from "@/app/components/Resources";

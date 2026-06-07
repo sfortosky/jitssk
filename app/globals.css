@@ -17,7 +17,6 @@
   --color-accent-content: #000000;
   --color-neutral: #171717;
   --color-neutral-content: #ffffff;
-
 }
 
 @plugin "daisyui/theme" {
@@ -50,11 +49,15 @@
 }
 
 h1 {
-    @apply text-5xl font-bold text-center pb-5;
+  @apply text-5xl font-bold text-center pb-5;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 section {
-  @apply py-15 w-full scroll-mt-20;
+  @apply w-full scroll-mt-20;
 }
 
 .section-content {
@@ -62,5 +65,16 @@ section {
 }
 
 textarea {
-    resize: none;
+  resize: none;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  height: 6px;
+}
+.scrollbar-thin::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: #cbd5e1;
+  border-radius: 10px;
 }

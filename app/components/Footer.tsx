@@ -13,13 +13,8 @@ const roygbivColors = [
 export default function Footer() {
     return (
         <footer className="w-full bg-transparent mt-auto block">
-            {/* Copyright */}
-            <div className="w-full text-center py-4 bg-transparent text-sm font-medium tracking-wide">
-                © {new Date().getFullYear()} JITSSK. All Rights Reserved.
-            </div>
-
             {/* ROYGBIV Ribbon */}
-            <div className="w-full flex h-12 md:h-8 overflow-hidden select-none">
+            <div className="w-full flex h-6 md:h-6 overflow-hidden select-none">
                 {roygbivColors.map((colorClass, index) => (
                     <div
                         key={index}

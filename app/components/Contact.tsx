@@ -1,12 +1,12 @@
-﻿import ContactForm from "@/app/components/form-components/ContactForm";
-import Link from "next/link";
+﻿import Link from "next/link";
 import Image from "next/image";
 
 export default function Contact() {
     return (
-        <section id="contact" className="min-h-[85vh] flex flex-col justify-center items-center py-12 px-4 w-full">
+        <section id="contact" className="flex-1 flex flex-col justify-center items-center py-12 px-4 w-full">
             <div className="section-content flex flex-col lg:flex-row gap-12 lg:gap-20 items-center lg:items-start text-center lg:text-left w-full max-w-4xl lg:justify-between">
 
+                {/* Information Block */}
                 <div className="flex flex-col gap-6 max-w-sm w-full mx-auto lg:mx-0">
                     <h1 className="text-4xl font-extrabold tracking-tight text-black pb-2 text-center lg:text-left">
                         Get in touch!
@@ -43,8 +43,17 @@ export default function Contact() {
                     </div>
                 </div>
 
-                <div className="w-full max-w-md mx-auto lg:mx-0">
-                    <ContactForm />
+                {/* Google Form */}
+                <div className="w-full max-w-md mx-auto lg:mx-0 bg-base-100 rounded-2xl border border-base-200 shadow-sm overflow-hidden">
+                    <iframe
+                        /* Form link goes here */
+                        src="https://docs.google.com/forms/d/e/YourContactFormIDHere/viewform?embedded=true"
+                        className="w-full h-[600px] border-0 block"
+                        title="Contact Us Form"
+                        loading="lazy"
+                    >
+                        Loading form...
+                    </iframe>
                 </div>
 
             </div>

@@ -25,7 +25,7 @@ export default function Home() {
     const continuousTrack = [...images, ...images, ...images, ...images];
 
     return (
-        <section id="home" className="w-full max-w-full pt-0 pb-12 overflow-hidden bg-white">
+        <section id="home" className="w-full max-w-full py-12 overflow-hidden bg-white">
 
             {/* Logo */}
             <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 mb-15 px-6 max-w-full mx-auto select-none text-center lg:text-left">
